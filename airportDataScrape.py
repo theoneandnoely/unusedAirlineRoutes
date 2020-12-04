@@ -7,6 +7,17 @@ import pandas as pd
 
 
 def scrapeAirportData():
+    '''
+    Function to scrape each airport page for:
+            - IATA code
+            - Country the Airport is in
+            - City the Airport is in
+            - Name of the Airport
+            - Latitude
+            - Longitude
+            
+    Returns: data -- A diction that contains the scraped data for each airport, grouped by IATA code.
+    '''
     #Get List of URLs
     url_list = getIATAURLs()
     counter = 0
@@ -48,6 +59,11 @@ def scrapeAirportData():
     return data
 
 def saveAirportDataAsCSV(data):
+    '''
+    Function to convert the dictionary of scraped data into a pandas DataFrame and save it as a csv
+    
+    Parameters: data -- Dictionary containing the scraped data grouped by IATA code
+    '''
     df = pd.DataFrame.from_dict(data, orient='index')
     df.to_csv('airport_data.csv')
     
