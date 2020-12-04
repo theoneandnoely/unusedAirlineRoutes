@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec  4 13:46:04 2020
-
-@author: Noel
-"""
 from string import ascii_lowercase as alphabet
 import re
 import requests

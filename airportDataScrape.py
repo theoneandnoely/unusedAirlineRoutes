@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec  4 14:22:03 2020
-
-@author: Noel
-"""
 import re
 import requests
 import time
